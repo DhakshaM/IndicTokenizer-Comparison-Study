@@ -1,6 +1,6 @@
 # Tokenizer Explorer
 
-An interactive tool for comparing 7 tokenization strategies across Hindi, Marathi, and Tamil (Indic languages), built as part of an NLP research project on tokenization strategy comparison.
+An interactive tool for comparing 7 tokenization strategies across Hindi, Marathi, and Tamil (Indic languages) for efficient LLM building and Prompt Engineering.
 
 ## Strategies Compared
 | # | Strategy | Type |
@@ -24,8 +24,7 @@ Playground live metrics are aligned with the Kaggle notebook definitions: `words
 
 ## Views
 - **Playground** — color-coded token spans for all strategies, live metric strip
-- **Diff** — word-level alignment table with disagreement highlighting
-- **Analysis** — corpus metric charts, radar profiles, length sweep
+- **Analysis** — corpus metric charts, context window view, cost of tokenization
 
 ## Setup
 
@@ -51,17 +50,6 @@ npm run dev
 ```
 
 Open `http://localhost:5173`
-
-### Model Files
-Trained tokenizer models (`.json`) and corpus metrics are not committed to this repo due to size. To obtain them:
-1. Run the Kaggle training notebooks 
-    > Hindi - https://www.kaggle.com/code/dhakshamk/nlp-hindi-tokenizers
-    > 
-    > Tamil - https://www.kaggle.com/code/dhakshamk/nlp-tamil-tokenizers
-    > 
-    > Marathi - https://www.kaggle.com/code/amudhans07/nlp-marathi-tokenizer
-2. Download the output zip
-3. Place files in `backend/models/`
 
 ## Data
 Trained on [IndicCorpV2](https://huggingface.co/datasets/ai4bharat/IndicCorpV2) — ~105MB per language.
