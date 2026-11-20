@@ -6,7 +6,7 @@ import Analysis   from './views/Analysis'
 // import Energy     from './views/Energy'
 import { tokenizeText } from './api'
 
-const VIEWS = ['Playground', 'Diff', 'Analysis']
+const VIEWS = ['Playground', 'Analysis']
 
 const LANGUAGES = [
   { code: 'hindi',   label: 'Hindi',   script: 'हिन्दी' },
@@ -115,12 +115,6 @@ export default function App() {
             result={result} loading={loading} error={error}
             strategies={STRATEGIES} language={language}
             onSubmit={runTokenize}
-          />
-        )}
-        {view === 'Diff' && (
-          <Diff
-            strategies={STRATEGIES}
-            defaultLanguage={language}
           />
         )}
         {view === 'Analysis' && (
